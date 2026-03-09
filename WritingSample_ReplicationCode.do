@@ -30,7 +30,7 @@ use JSTdatasetR6, clear
 save "macrohistory", replace
 
 /*********************************************************************************************
-**			Data Processing/Cleaning and Estimation	 (Dec. 10 5:33pm) 				    **
+**			Data Processing/Cleaning and Estimation	                        			    **
 **********************************************************************************************/
 		* Define preferred window
 		keep if year >= 1970 & year <= 2020
@@ -74,7 +74,7 @@ save "macrohistory", replace
 
 
 	/*--------------------------------------------------------------------
-	---			Construct Outcome Variables	(Dec. 10 11:27am)		--
+	---			        Construct Outcome Variables	            		--
 	--------------------------------------------------------------------*/
 	xtset iso_id year
 	
@@ -107,7 +107,7 @@ save "macrohistory", replace
 
 
 	/*--------------------------------------------------------------------
-	---			Construct Threshold Variables	(Dec. 10 1:00pm)		--
+	---			     Construct Threshold Variables	            		--
 	--------------------------------------------------------------------*/
 
 
@@ -217,7 +217,7 @@ save "macrohistory", replace
 				}
 				
 		/*---------------------------------------------------------------*
-			Diagnostics: Which Checking Threshold Obs and Variation (Dec 10 12:25am)
+			Diagnostics: Which Checking Threshold Obs and Variation 
 		*---------------------------------------------------------------*/
 
 		di " "
@@ -314,7 +314,7 @@ save "macrohistory", replace
 
 
 	/*---------------------------------------------------------------*
-			Data Descriptions:  (Dec 10 5:11pm)
+			Data Descriptions:  
 	*---------------------------------------------------------------*/
 
 		clear
@@ -408,7 +408,7 @@ save "macrohistory", replace
 
 
 		/*****************************************************************
-		*  E. Summary Stats: Baseline & Robustness Controls (4:39pm)
+		*  E. Summary Stats: Baseline & Robustness Controls 
 		*****************************************************************/
 
 			*---------------------------------------------------------------*
@@ -468,7 +468,7 @@ save "macrohistory", replace
 	
 	
 /*********************************************************************************************
-**				Final Summary Stats with Restricted Sample	 (Dec. 10 6:53pm )			    **
+**				Final Summary Stats with Restricted Sample	                 			    **
 **********************************************************************************************/
 	use "austerity_rest.dta", clear
 	count /// sanity check
@@ -620,7 +620,7 @@ save "macrohistory", replace
 
 
 	/*-------------------------------------------------------------------------
-		Preliminary Review Real GDP Growth V. Public Debt Scatter (Dec 10 7:32pm)
+		Preliminary Review Real GDP Growth V. Public Debt Scatter 
 	-------------------------------------------------------------------------*/
 		twoway ///
 			(scatter d_rgdp L.debtgdp, mcolor(gs12) msymbol(o) msize(small)) ///
@@ -633,7 +633,7 @@ save "macrohistory", replace
 
 
 	/*-------------------------------------------------------------------------
-		Preliminary Review Real GDP Growth V. Public Debt Scatter (Binned) ( Dec 10 7:32pm)
+		Preliminary Review Real GDP Growth V. Public Debt Scatter (Binned) 
 	-------------------------------------------------------------------------*/
 		preserve
 			* 20 equally-sized bins by public debt
@@ -652,7 +652,7 @@ save "macrohistory", replace
 		restore
 		
 	/*-------------------------------------------------------------------------
-		Preliminary Review   Public V.  Debt Joint Distribution ( Dec 10 7:32pm)
+		Preliminary Review   Public V.  Debt Joint Distribution
 	-------------------------------------------------------------------------*/
 		twoway scatter privdebt debtgdp, ///
 			msymbol(o) mcolor(gs12) ///
@@ -692,7 +692,7 @@ save "macrohistory", replace
 	
 
 	/*-------------------------------------------------------------------------
-		Preliminary Review   Pre-trends using Reinhart Rogoff and 80% ( Dec 10 8:25pm)
+		Preliminary Review   Pre-trends using Reinhart Rogoff and 80% 
 	-------------------------------------------------------------------------*/
 		* Define group: countries ever crossing 90% debt
 		preserve
@@ -731,7 +731,7 @@ save "macrohistory", replace
 				
 
 	/*----------------------------------------------------------
-		Preliminary Review 	Clean and Staggered Treatment  Dec 10 9:23pm
+		Preliminary Review 	Clean and Staggered Treatment 
 	----------------------------------------------------------*/
 		preserve
 		capture drop ever90
@@ -766,7 +766,7 @@ save "macrohistory", replace
 
 
 	/*----------------------------------------------------------
-		Preliminary Review 	Corr/Cov Matrix of Control Dec 10 9:54pm
+		Preliminary Review 	Corr/Cov Matrix of Control 
 	----------------------------------------------------------*/
 		local controls L_trade_open L_unemp L_ln_ca_gdp ///
 					   L_credit_growth L_housing_tr ///
@@ -964,7 +964,7 @@ save "macrohistory", replace
 
 
 /*********************************************************************************************
-**  LP–DiD Master Pipeline: Baseline, Crisis-Window, Robustness (Dec 11 1:27am)
+**  LP–DiD Master Pipeline: Baseline, Crisis-Window, Robustness 
 *********************************************************************************************/
 
 	clear all
@@ -1367,10 +1367,10 @@ save "macrohistory", replace
 		
 		
 	/********************************************************************
-							Additional Insight:	Dec 11 (9:09am)
+							Additional Insight:	
 		Probability (%) that first crossing occurs in crisis window
 	*********************************************************************/
-		* Optional, but keeps things clean
+		
 		clear
 		capture postclose _all
 		macro drop _all
@@ -1502,10 +1502,10 @@ save "macrohistory", replace
 		
 		
 ********************************************************************************
-** 		Empirical Results Section Tables/Figure     (Dec 11 9:01am)            **
+** 		Empirical Results Section Tables/Figure                               **
 ********************************************************************************
 *			ATTENTION: Each Block will have to be ran separately here		   *
-*					they will -break- on their own. 						   *
+*					they will break on their own. 	     					   *
 ********************************************************************************
 
 	/*------------------------------------------------------------
@@ -1637,7 +1637,7 @@ save "macrohistory", replace
 					xtset iso_id year
 
 			*--------------------------------------------------------------*
-			*  Define crisis episodes and 3-year post-crisis window     *
+			*  Define crisis episodes and 3-year post-crisis window        *
 			*--------------------------------------------------------------*
 			
 			* Identify the start year of each crisis episode (per country)
