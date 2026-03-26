@@ -7,7 +7,7 @@ The project investigates whether crossing high public debt thresholds affects ec
 
 ## Abstract
 
-This paper evaluates the relationship between high public and private debt and macroeconomic performance through the local-projection difference-in-differences (LP-DiD) framework. Drawing on macroeconomic data from advanced economies for 1972–2020, this paper estimates the dynamic responses of macroeconomic conditions to the crossings of high public and private debt thresholds. This paper also contextualizes these findings with financial crises to test for endogeneity and the severity of macroeconomic conditions. This paper finds that high public debt thresholds, such as the benchmark 90\% ratio, coincide closely with financial crises and are associated with already declining Real GDP growth rates. In contrast, high private debt thresholds predict sharper and more persistent contractions in GDP, consumption, and employment.
+This paper evaluates the relationship between high public and private debt and macroeconomic performance through the local-projection difference-in-differences (LP-DiD) framework. Drawing on macroeconomic data from advanced economies for 1972–2020,  we estimate the dynamic responses of macroeconomic conditions to the crossings of high public and private debt thresholds.  Findings are contextualized in relation to financial crises to test for endogeneity and assess the severity of macroeconomic conditions. This paper finds that high public debt thresholds, such as the benchmark 90\% ratio, coincide closely with financial crises and are associated with already declining Real GDP growth rates. In contrast, high private debt thresholds predict sharper and more persistent contractions in GDP, consumption, and employment.
 
 ---
 
